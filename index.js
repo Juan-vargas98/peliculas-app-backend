@@ -15,7 +15,12 @@ const app = express();
 connectDB();
 
 // Middlewares
-app.use(cors()); // Habilita CORS para permitir peticiones desde React
+// ------------------------------------------------------------------
+// CAMBIO CLAVE: Especificar el origen para solucionar el error de CORS.
+app.use(cors({
+    origin: '*' // Permite peticiones desde CUALQUIER dominio (incluido tu Frontend en Netlify)
+})); 
+// ------------------------------------------------------------------
 app.use(express.json()); // Permite a la API procesar cuerpos de petición en formato JSON
 
 const port = process.env.PORT || 3000;
