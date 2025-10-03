@@ -1,11 +1,22 @@
 const Media = require('../models/Media');
 
+// ------------------------------------------------------------------
+// SOLUCIÓN FINAL PARA RENDER: 
+// Forzamos la carga de los modelos de referencia antes del .populate()
+require('../models/Director'); 
+require('../models/Genero');
+require('../models/Productora');
+require('../models/Tipo');
+// ------------------------------------------------------------------
+
+
 exports.createMedia = async (req, res) => {
     try {
         const media = new Media(req.body);
         await media.save();
         res.status(201).json(media);
     } catch (err) {
+        // En caso de error, mostrar el mensaje específico
         res.status(400).json({ message: err.message });
     }
 };
@@ -20,6 +31,7 @@ exports.getMedia = async (req, res) => {
             .populate('tipo');
         res.status(200).json(media);
     } catch (err) {
+        // Si falla la consulta, devuelve un error 500
         res.status(500).json({ message: err.message });
     }
 };
