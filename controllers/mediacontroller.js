@@ -5,7 +5,7 @@ const Media = require('../models/media');
 // Forzamos la carga de los modelos de referencia antes del .populate()
 require('../models/director'); 
 require('../models/genero');
-require('../models/Productora');
+require('../models/productora');
 require('../models/tipo');
 // ------------------------------------------------------------------
 
