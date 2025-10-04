@@ -1,4 +1,4 @@
-const Productora = require('../models/Productora');
+const Productora = require('../models/productora');
 
 exports.createProductora = async (req, res) => {
     try {
