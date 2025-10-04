@@ -2,7 +2,8 @@ const Genero = require('../models/Genero');
 
 exports.createGenero = async (req, res) => {
     try {
-        const genero = new Genero(req.body);
+        // La fecha de actualización se setea automáticamente con el 'default: Date.now'
+        const genero = new Genero(req.body); 
         await genero.save();
         res.status(201).json(genero);
     } catch (err) {
@@ -31,6 +32,9 @@ exports.getGeneroById = async (req, res) => {
 
 exports.updateGenero = async (req, res) => {
     try {
+        // Actualizar la fecha de actualización 
+        req.body.fechaActualizacion = new Date(); 
+        
         const genero = await Genero.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!genero) return res.status(404).json({ message: 'Género no encontrado' });
         res.status(200).json(genero);
