@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const productoraController = require('../controllers/productoracontroller');
+const productoraController = require('../controllers/productoraController');
 
 router.get('/', productoraController.getProductoras);
 router.get('/:id', productoraController.getProductoraById);

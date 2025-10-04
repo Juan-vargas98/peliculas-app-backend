@@ -1,4 +1,4 @@
-const Tipo = require('../models/tipo');
+const Tipo = require('../models/Tipo');
 
 exports.createTipo = async (req, res) => {
     try {

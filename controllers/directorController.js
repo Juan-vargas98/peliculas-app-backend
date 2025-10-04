@@ -1,4 +1,4 @@
-const Director = require('../models/director');
+const Director = require('../models/Director');
 
 exports.createDirector = async (req, res) => {
     try {

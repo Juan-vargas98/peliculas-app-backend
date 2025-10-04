@@ -1,12 +1,12 @@
-const Media = require('../models/media');
+const Media = require('../models/Media');
 
 // ------------------------------------------------------------------
 // SOLUCIÓN FINAL PARA RENDER: 
 // Forzamos la carga de los modelos de referencia antes del .populate()
-require('../models/director'); 
-require('../models/genero');
-require('../models/productora');
-require('../models/tipo');
+require('../models/Director'); 
+require('../models/Genero');
+require('../models/Productora');
+require('../models/Tipo');
 // ------------------------------------------------------------------
 
 
