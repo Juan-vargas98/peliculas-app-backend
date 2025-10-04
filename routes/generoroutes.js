@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 // Importa el controlador con el nombre estandarizado en minúsculas
-const generoController = require('../controllers/generoController'); 
+const generoController = require('../controllers/generocontroller'); 
 
 router.get('/', generoController.getGeneros);
 router.get('/:id', generoController.getGeneroById);
