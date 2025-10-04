@@ -7,7 +7,11 @@ const generoRoutes = require('./routes/generoRoutes');
 const directorRoutes = require('./routes/directorRoutes');
 const productoraRoutes = require('./routes/productoraRoutes');
 const tipoRoutes = require('./routes/tipoRoutes');
-const mediaRoutes = require('./routes/mediaRoutes');
+const mediaRoutes = require('./routes/mediaroutes');
+
+// const mediaRoutes = require('./routes/mediaroutes'); 
+
+// FORZANDO CAMBIO DE GIT
 
 const app = express();
 
@@ -18,7 +22,7 @@ connectDB();
 // ------------------------------------------------------------------
 // CAMBIO CLAVE: Especificar el origen para solucionar el error de CORS.
 app.use(cors({
-    origin: 'https://sweet-crepe-23cb82.netlify.app' // Permite peticiones desde CUALQUIER dominio (incluido tu Frontend en Netlify)
+    origin: '*' // Permite peticiones desde CUALQUIER dominio (incluido tu Frontend en Netlify)
 })); 
 // ------------------------------------------------------------------
 app.use(express.json()); // Permite a la API procesar cuerpos de petición en formato JSON
