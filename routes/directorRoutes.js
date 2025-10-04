@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const directorController = require('../controllers/directorController');
+const directorController = require('../controllers/directorcontroller');
 
 router.get('/', directorController.getDirectores);
 router.get('/:id', directorController.getDirectorById);

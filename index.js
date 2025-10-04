@@ -3,10 +3,10 @@ const cors = require('cors');
 const connectDB = require('./config/database');
 
 // Importar rutas de cada módulo
-const generoRoutes = require('./routes/generoRoutes');
-const directorRoutes = require('./routes/directorRoutes');
-const productoraRoutes = require('./routes/productoraRoutes');
-const tipoRoutes = require('./routes/tipoRoutes');
+const generoRoutes = require('./routes/generoroutes');
+const directorRoutes = require('./routes/directorroutes');
+const productoraRoutes = require('./routes/productoraroutes');
+const tipoRoutes = require('./routes/tiporoutes');
 const mediaRoutes = require('./routes/mediaroutes');
 
 // const mediaRoutes = require('./routes/mediaroutes'); 

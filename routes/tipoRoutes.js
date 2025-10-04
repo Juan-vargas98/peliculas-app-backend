@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const tipoController = require('../controllers/tipoController');
+const tipoController = require('../controllers/tipocontroller');
 
 router.get('/', tipoController.getTipos);
 router.get('/:id', tipoController.getTipoById);
